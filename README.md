@@ -12,5 +12,20 @@ So its a 3 page app.
 
 ### I am very new to Flutter just 7 days in it so there is no architecture.
 
+What it contains if you are moving from Native App development -> Flutter App development.
+- Splash Creation
+- Delay in splash
+- Use of button
+- Use of Navigation-up
+- Use of App-title
+- Use of Linear Layout
+- Use of Relative Layout
+- Intent for Activity Switching
+- Use of TextFormFields
+
+
+
+
+
 
 
