@@ -1,16 +1,24 @@
-# flutter_app
+# Flutter
+Calculator app with Flutter. 
 
-A new Flutter application.
+![](Webp.net-gifmaker.gif)
 
-## Getting Started
+### Note : I have Created a simple calculator app using Flutter, I am not sure whether it will run or not in IOS but it is working in android devices.
 
-This project is a starting point for a Flutter application.
+So its a 3 page app.
+- Splash
+- Landing Page
+- Operation Page.
 
-A few resources to get you started if this is your first Flutter project:
+### I am very new to Flutter just 7 days in it so there is no architecture.
 
-- [Lab: Write your first Flutter app](https://flutter.io/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.io/docs/cookbook)
-
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.io/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
+What it contains if you are moving from Native App development -> Flutter App development.
+- Splash Creation
+- Delay in splash
+- Use of button
+- Use of Navigation-up
+- Use of App-title
+- Use of Linear Layout
+- Use of Relative Layout
+- Intent for Activity Switching
+- Use of TextFormFields
