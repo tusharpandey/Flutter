@@ -1,6 +1,6 @@
 # Flutter
 Calculator app with Flutter. 
 
-![](Webp.net-gifmaker (1).gif)
+![](Webp.net-gifmaker.gif)
 
 
