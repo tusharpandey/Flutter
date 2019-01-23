@@ -44,11 +44,13 @@ class MyOperationWidgetState extends State<OperationWidget> {
     switch(controllerId){
       case AppConstant.controllerID_1:
         _value1 = _controller1.text;
+        _value1 = _value1.isEmpty ? "0" : _value1;
         print("value1 : " + _value1);
         break;
 
       case AppConstant.controllerID_2:
         _value2 = _controller2.text;
+        _value2 = _value2.isEmpty ? "0" : _value2;
         print("value2 : " + _value2);
         break;
     }
