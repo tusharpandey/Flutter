@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/data/OperationData.dart';
-import 'package:flutter_app/screens/layout/CustomText.dart';
+import 'package:flutter_app/views/CustomText.dart';
 import 'dart:core';
 
 import 'package:flutter_app/utils/OwnColors.dart';

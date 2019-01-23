@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_app/screens/landingpage.dart';
+import 'package:flutter_app/screens/section/calculator/operationtypes.dart';
 import 'package:flutter_app/utils/ImagesUrls.dart';
 
 void main() {
@@ -20,7 +21,7 @@ class Splash extends StatelessWidget {
           builder: (context) => new SplashContent(),
         ),
         routes: <String, WidgetBuilder>{
-          '/main': (BuildContext context) => new HomePage()
+          '/main': (BuildContext context) => new LandingPage()
         });
   }
 }

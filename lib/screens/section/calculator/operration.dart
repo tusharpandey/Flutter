@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/data/OperationData.dart';
-import 'package:flutter_app/screens/layout/ResultLayout.dart';
-import 'package:flutter_app/screens/layout/operation.dart';
+import 'package:flutter_app/screens/section/calculator/layout/ResultLayout.dart';
+import 'package:flutter_app/screens/section/calculator/layout/operationlayout.dart';
 import 'package:flutter_app/utils/AppConstant.dart';
 import 'package:flutter_app/utils/OwnColors.dart';
 

@@ -1,96 +1,72 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/data/OperationData.dart';
-import 'dart:core';
-import 'package:flutter_app/screens/seondscreen.dart';
-import 'package:flutter_app/utils/ImagesUrls.dart';
+import 'package:flutter_app/screens/section/calculator/operationtypes.dart';
 import 'package:flutter_app/utils/Strings.dart';
 
-class HomePage extends StatelessWidget {
+class LandingPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    var title = 'Home Page';
+    return new MaterialApp(
+        home: new Scaffold(
+      appBar: new AppBar(
+        title: Text(Strings.WELCOME_MSG),
+      ),
+      body: LandingList(),
+    ));
+  }
+}
 
-    var data = OperationData();
+class LandingList extends StatefulWidget {
+  @override
+  State<StatefulWidget> createState() {
+    return new LandingListState();
+  }
+}
 
-    return MaterialApp(
-        title: title,
-        home: Scaffold(
-            appBar: AppBar(
-              title: Text(title),
-            ),
-            body: new Container(
-                width: double.maxFinite,
-                padding: const EdgeInsets.all(8.0),
-                child: new Column(children: [
-                  new Column(
-                    children: <Widget>[
-                      ButtonTheme(
-                        minWidth: double.maxFinite,
-                        child: RaisedButton(
-                          textColor: Colors.white,
-                          color: Colors.blue,
-                          onPressed: () {
-                            data.operationName = Strings.ADDITION;
-                            data.iconName = ImagesUrls.addition;
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => SecondScreen(data)),
-                            );
-                          },
-                          child: new Text(Strings.ADDITION),
-                        ),
-                      ),
-                      ButtonTheme(
-                          minWidth: double.maxFinite,
-                          child: new RaisedButton(
-                            textColor: Colors.white,
-                            color: Colors.red,
-                            onPressed: () {
-                              data.operationName = Strings.SUBTRACTION;
-                              data.iconName = ImagesUrls.subtaction;
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => SecondScreen(data)),
-                              );
-                            },
-                            child: new Text(Strings.SUBTRACTION),
-                          )),
-                      ButtonTheme(
-                          minWidth: double.maxFinite,
-                          child: new RaisedButton(
-                            textColor: Colors.white,
-                            color: Colors.green,
-                            onPressed: () {
-                              data.operationName = Strings.MULTIPLICATION;
-                              data.iconName = ImagesUrls.multiplication;
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => SecondScreen(data)),
-                              );
-                            },
-                            child: new Text(Strings.MULTIPLICATION),
-                          )),
-                      ButtonTheme(
-                          minWidth: double.maxFinite,
-                          child: new RaisedButton(
-                            textColor: Colors.white,
-                            color: Colors.yellow,
-                            onPressed: () {
-                              data.operationName = Strings.DIVIDE;
-                              data.iconName = ImagesUrls.divide;
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => SecondScreen(data)),
-                              );
-                            },
-                            child: new Text(Strings.DIVIDE),
-                          )),
-                    ],
-                  )
-                ]))));
+class LandingListState extends State<LandingList> {
+  final _suggestions = <String>[];
+
+  @override
+  void initState() {
+    super.initState();
+    _suggestions.add(Strings.CALCULATOR);
+    _suggestions.add(Strings.LISTVIEW);
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: _buildSuggestions(),
+    );
+  }
+
+  Widget _buildSuggestions() {
+    return new ListView.separated(
+      itemCount: _suggestions.length,
+      itemBuilder: (context, i) {
+        return _buildRow(_suggestions[i]);
+      },
+      separatorBuilder: (context, index) => Divider(
+            color: Colors.black,
+          ),
+    );
+  }
+
+  Widget _buildRow(String pair) {
+    return new ListTile(
+      contentPadding: const EdgeInsets.all(10.0),
+      title: new Text(pair),
+      onTap: () => onTapped(pair),
+    );
+  }
+
+  void onTapped(String value) {
+    switch (value) {
+      case Strings.CALCULATOR:
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => Calculator()),
+        );
+        break;
+    }
   }
 }
