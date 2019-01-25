@@ -30,7 +30,7 @@ class LandingListState extends State<LandingList> {
   void initState() {
     super.initState();
     _suggestions.add(Strings.CALCULATOR);
-    _suggestions.add(Strings.LISTVIEW);
+    _suggestions.add(Strings.NOTIFICATION);
   }
 
   @override
@@ -68,7 +68,7 @@ class LandingListState extends State<LandingList> {
           MaterialPageRoute(builder: (context) => Calculator()),
         );
         break;
-      case Strings.LISTVIEW:
+      case Strings.NOTIFICATION:
         Navigator.push(
           context,
           MaterialPageRoute(builder: (context) => PushMessagingExample()),

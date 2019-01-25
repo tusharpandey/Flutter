@@ -3,7 +3,7 @@ class Strings {
 
   //SECTIONS
   static const String CALCULATOR = "Calculator";
-  static const String LISTVIEW = "List";
+  static const String NOTIFICATION = "Notification";
 
 
   //OPERATION
