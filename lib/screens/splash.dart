@@ -2,14 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_app/screens/landingpage.dart';
-import 'package:flutter_app/screens/section/calculator/operationtypes.dart';
 import 'package:flutter_app/utils/ImagesUrls.dart';
-
-void main() {
-  runApp(new MaterialApp(
-    home: new Splash(),
-  ));
-}
 
 class Splash extends StatelessWidget {
   BuildContext context;

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/notification/Notification.dart';
 import 'package:flutter_app/screens/section/calculator/operationtypes.dart';
 import 'package:flutter_app/utils/Strings.dart';
 
@@ -65,6 +66,12 @@ class LandingListState extends State<LandingList> {
         Navigator.push(
           context,
           MaterialPageRoute(builder: (context) => Calculator()),
+        );
+        break;
+      case Strings.LISTVIEW:
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => PushMessagingExample()),
         );
         break;
     }
