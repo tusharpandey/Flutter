@@ -9,10 +9,6 @@ import 'package:platform/platform.dart';
 
 typedef Future<dynamic> MessageHandler(Map<String, dynamic> message);
 
-/// Implementation of the Firebase Cloud Messaging API for Flutter.
-///
-/// Your app should call [requestNotificationPermissions] first and then
-/// register handlers for incoming messages with [configure].
 class FirebaseMessaging {
   factory FirebaseMessaging() => _instance;
 
@@ -32,7 +28,7 @@ class FirebaseMessaging {
   MessageHandler _onLaunch;
   MessageHandler _onResume;
 
-  /// On iOS, prompts the user for notification permissions the first time
+  /// On iOS, prompts the user for screens.section.notification permissions the first time
   /// it is called.
   ///
   /// Does nothing on Android.
@@ -51,7 +47,7 @@ class FirebaseMessaging {
   final StreamController<IosNotificationSettings> _iosSettingsStreamController =
       StreamController<IosNotificationSettings>.broadcast();
 
-  /// Stream that fires when the user changes their notification settings.
+  /// Stream that fires when the user changes their screens.section.notification settings.
   ///
   /// Only fires on iOS.
   Stream<IosNotificationSettings> get onIosSettingsRegistered {

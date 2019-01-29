@@ -4,7 +4,8 @@ class Strings {
   //SECTIONS
   static const String CALCULATOR = "Calculator";
   static const String NOTIFICATION = "Notification";
-
+  static const String GOOGLE_LOGIN = "Google Sign-in";
+  static const String API_REQUEST = "Api Request";
 
   //OPERATION
   static const String ADDITION = "ADDITION";

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/notification/Notification.dart';
 import 'package:flutter_app/screens/section/calculator/operationtypes.dart';
+import 'package:flutter_app/screens/section/googleSingin/googleSignin.dart';
+import 'package:flutter_app/screens/section/notification/Notification.dart';
 import 'package:flutter_app/utils/Strings.dart';
 
 class LandingPage extends StatelessWidget {
@@ -31,6 +32,8 @@ class LandingListState extends State<LandingList> {
     super.initState();
     _suggestions.add(Strings.CALCULATOR);
     _suggestions.add(Strings.NOTIFICATION);
+    _suggestions.add(Strings.GOOGLE_LOGIN);
+    _suggestions.add(Strings.API_REQUEST);
   }
 
   @override
@@ -72,6 +75,18 @@ class LandingListState extends State<LandingList> {
         Navigator.push(
           context,
           MaterialPageRoute(builder: (context) => PushMessagingExample()),
+        );
+        break;
+      case Strings.GOOGLE_LOGIN:
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => SignInDemo()),
+        );
+        break;
+      case Strings.API_REQUEST:
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => SignInDemo()),
         );
         break;
     }

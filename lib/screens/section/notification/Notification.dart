@@ -10,14 +10,15 @@ class PushMessagingExample extends StatefulWidget {
 
 class _PushMessagingExampleState extends State<PushMessagingExample> {
   String _homeScreenText = "Waiting for token...";
-
   final FirebaseMessaging _firebaseMessaging = FirebaseMessaging();
 
   FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin;
+
   Future _showNotificationWithDefaultSound() async {
     flutterLocalNotificationsPlugin = new FlutterLocalNotificationsPlugin();
+
     var initializationSettingsAndroid =
-    new AndroidInitializationSettings('app_icon');
+        new AndroidInitializationSettings('app_icon');
     var initializationSettingsIOS = new IOSInitializationSettings();
     var initializationSettings = new InitializationSettings(
         initializationSettingsAndroid, initializationSettingsIOS);
@@ -55,17 +56,20 @@ class _PushMessagingExampleState extends State<PushMessagingExample> {
         _showNotificationWithDefaultSound();
       },
     );
+
     _firebaseMessaging.requestNotificationPermissions(
         const IosNotificationSettings(sound: true, badge: true, alert: true));
     _firebaseMessaging.onIosSettingsRegistered
         .listen((IosNotificationSettings settings) {
       print("Settings registered: $settings");
     });
+
     _firebaseMessaging.getToken().then((String token) {
       assert(token != null);
       setState(() {
         _homeScreenText = "Push Messaging token: $token";
       });
+
       print(_homeScreenText);
     });
   }
@@ -74,8 +78,8 @@ class _PushMessagingExampleState extends State<PushMessagingExample> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text('Push Messaging Demo'),
-        ));
+      title: const Text('Push Messaging Demo'),
+    ));
   }
 }
 

@@ -99,8 +99,8 @@ class MyOperationWidgetState extends State<OperationWidget> {
 }
 
 class SecondScreen extends StatelessWidget {
-  OperationData data;
 
+  OperationData data;
   SecondScreen(OperationData data) {
     this.data = data;
   }

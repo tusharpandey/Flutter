@@ -20,6 +20,8 @@ dependencies:
   firebase_messaging: ^2.0.0
   flutter_local_notifications:
   platform: ^2.0.0
+  google_sign_in: ^3.3.0
+  http: ^0.12.0
 
 flutter:
   uses-material-design: true
