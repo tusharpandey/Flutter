@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/screens/section/apiRequest/ApiRequestSample.dart';
 import 'package:flutter_app/screens/section/calculator/operationtypes.dart';
 import 'package:flutter_app/screens/section/googleSingin/googleSignin.dart';
 import 'package:flutter_app/screens/section/notification/Notification.dart';
@@ -86,7 +87,7 @@ class LandingListState extends State<LandingList> {
       case Strings.API_REQUEST:
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => SignInDemo()),
+          MaterialPageRoute(builder: (context) => ApiRequestSample()),
         );
         break;
     }

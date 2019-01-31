@@ -9,10 +9,7 @@ abstract class ParentWidget extends StatelessWidget {
   }
 
   Widget build(BuildContext context) {
-    AppBar actionBar = title.isEmpty ? null : new AppBar(title: Text(title));
-    return new MaterialApp(
-        home: new Scaffold(
-            appBar: actionBar, body: new GenericStateFullWidget(this)));
+    return new GenericStateFullWidget(this);
   }
 
   State<StatefulWidget> getWidget();
