@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_app/screens/section/apiRequest/ApiRequestSample.dart';
 import 'package:flutter_app/screens/section/calculator/operationtypes.dart';
 import 'package:flutter_app/screens/section/googleSingin/googleSignin.dart';
+import 'package:flutter_app/screens/section/listview/CountryNames.dart';
 import 'package:flutter_app/screens/section/notification/Notification.dart';
 import 'package:flutter_app/utils/Strings.dart';
 
@@ -35,6 +36,7 @@ class LandingListState extends State<LandingList> {
     _suggestions.add(Strings.NOTIFICATION);
     _suggestions.add(Strings.GOOGLE_LOGIN);
     _suggestions.add(Strings.API_REQUEST);
+    _suggestions.add(Strings.COUNTRY_LIST);
   }
 
   @override
@@ -88,6 +90,12 @@ class LandingListState extends State<LandingList> {
         Navigator.push(
           context,
           MaterialPageRoute(builder: (context) => ApiRequestSample()),
+        );
+        break;
+      case Strings.COUNTRY_LIST:
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => CountryNames()),
         );
         break;
     }

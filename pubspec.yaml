@@ -32,4 +32,5 @@ flutter:
     - assets/images/minus.png
     - assets/images/divide.png
     - assets/images/multiply.png
+    - assets/data.json
 

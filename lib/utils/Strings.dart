@@ -6,6 +6,8 @@ class Strings {
   static const String NOTIFICATION = "Notification";
   static const String GOOGLE_LOGIN = "Google Sign-in";
   static const String API_REQUEST = "Api Request";
+  static const String COUNTRY_LIST = "Country List";
+
 
   //OPERATION
   static const String ADDITION = "ADDITION";
